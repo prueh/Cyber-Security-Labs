@@ -1,0 +1,14 @@
+# Week 3: NIDS Integration & Perimeter Defense
+## Objective
+To eliminate "Network Blind Spots" by integrating a Network Intrusion Detection System (NIDS) to inspect raw packets before they reach the OS layer.
+
+## Key Achievements
+* **Suricata Integration:** Deployed Suricata in IDS mode on a Kali Linux node to monitor all traffic entering the lab environment.
+* **Full-Stack Visibility:** Successfully correlated network-level alerts (Suricata) with host-level alerts (Wazuh). For example, correlating an Nmap scan alert with a subsequent File Integrity Change in `/etc/shadow`.
+* **Perimeter Hardening:** Implemented high-performance geographic filtering using `ipset` and `iptables` to block high-risk CIDR blocks in constant time.
+* **Log Pipeline Troubleshooting:** Resolved a "silent failure" issue by re-mapping interface listeners in `suricata.yaml` to ensure proper packet capture.
+
+## Tools Used
+* **Suricata** (NIDS)
+* **ipset** & **iptables**
+* **Kali Linux**
