@@ -1,0 +1,14 @@
+# Week 4: pfSense & Vulnerability Management
+## Objective
+To establish a formal network perimeter and implement a continuous vulnerability management lifecycle.
+
+## Key Achievements
+* **pfSense Deployment:** Reconfigured the lab from a flat network to a segmented model, routing all VM traffic through a pfSense virtual firewall.
+* **Threat Intelligence Integration:** Integrated **VirusTotal API** for automated file hash lookups and mapped alerts to the **MITRE ATT&CK** framework.
+* **Vulnerability Remediation:** Conducted automated scans using the Wazuh Vulnerability module. Performed a "patch-and-verify" cycle, successfully remediating "Critical" and "High" (CVSS 7.0+) risks.
+* **Reporting:** Developed a custom SOC Dashboard featuring alert severity trends, agent health, and geographic mapping of attack sources.
+
+## Tools Used
+* **pfSense** (Firewall/Gateway)
+* **VirusTotal API**
+* **MITRE ATT&CK Framework**
