@@ -14,3 +14,4 @@ Welcome to my technical portfolio. This repository contains the weekly progress,
 * **[Week 3: NIDS Integration](./Week-3-NIDS-Integration)** - Suricata deployment and packet inspection.
 * **[Week 4: Perimeter & Vulnerabilities](./Week-4-Perimeter-Defense)** - pfSense routing and automated patching.
 * **[Week 5: Malware Analysis](./Week-5-Malware-Analysis)** - njRAT and WannaCry detonation & signature writing.
+* **[Week 6: Data Exfiltration Mitigation](./Week-6-Exfiltration-Mitigation)** - Custom alerting for T1027 obfuscation using certutil.
