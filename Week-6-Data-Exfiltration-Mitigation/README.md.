@@ -1,0 +1,16 @@
+# Week 6: Data Exfiltration Mitigation & Custom Alerting
+## Objective
+To identify, simulate, and mitigate advanced data exfiltration techniques that bypass standard security logging.
+
+## Key Achievements
+* **Threat Simulation (T1027):** Simulated an adversary using `certutil` to obfuscate sensitive data into Base64 format within a hidden directory (`C:\espionage`) to bypass Data Loss Prevention (DLP) tools.
+* **Gap Analysis:** Identified that default Wazuh File Integrity Monitoring (FIM) only flagged the activity as a low-severity "File modified" event (Rule 550), which would likely be missed in a production environment.
+* **Detection Engineering:** Developed and deployed **Custom Wazuh Rule 100002**. 
+    * **Logic:** Specifically monitors for the creation of `.b64` extensions within sensitive directories.
+    * **Impact:** Escalated the alert to **Level 10 (Critical)**, significantly reducing the Mean Time to Detect (MTTD).
+* **Proof of Concept:** Verified the rule by generating `final_proof.b64` on a Windows endpoint, successfully triggering an immediate high-priority alert on the SOC dashboard.
+
+## Tools Used
+* **Wazuh SIEM** (FIM & Custom Decoders/Rules)
+* **Windows certutil** (Obfuscation tool)
+* **MITRE ATT&CK Framework** (T1027)
